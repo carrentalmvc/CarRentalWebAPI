@@ -1,0 +1,7 @@
+﻿table { margin: 10px 0;}
+th { text-align: left;}
+.nameCol {width: 100px;}
+.locationCol {width: 100px;}
+.selectCol {width: 30px;}
+.display { float: left; border: thin solid black; margin: 10px; padding: 10px;}
+.display label {display: inline-block;width: 100px;}
