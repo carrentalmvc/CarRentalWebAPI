@@ -8,7 +8,7 @@ namespace Rennish.WebAPI.Repository
 {
     public class ReservationRepository : IReservationRepository
     {
-        private static ReservationRepository _instance;
+        private static ReservationRepository _instance = null;
 
        private List<Reservation> data = new List<Reservation>{
         

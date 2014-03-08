@@ -57,13 +57,15 @@
         <h4>Add New Reservation</h4>
         @{
             
-            AjaxOptions options = new AjaxOptions
+            AjaxOptions ajaxOptions = new AjaxOptions
             {
-
+                HttpMethod = "POST",
+                OnSuccess = "InsertSuccess",
+                Url = "/api/Reservation"
             };
         }
 
-        @using (Ajax.BeginForm(options))
+        @using (Ajax.BeginForm(ajaxOptions))
         {
             @Html.Hidden("ReservavtionId", 0)
             <p>

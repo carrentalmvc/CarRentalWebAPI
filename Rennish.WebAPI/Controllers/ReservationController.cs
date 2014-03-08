@@ -37,9 +37,9 @@ namespace Rennish.WebAPI.Controllers
         }
 
         [HttpDelete]
-        public void DeleteReservation(Reservation item)
+        public void DeleteReservation(int Id)
         {
-             repo.Remove(item.ReservationId);
+            repo.Remove(Id);
         }
     }
 }
