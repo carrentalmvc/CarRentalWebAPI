@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace Rennish.WebAPI
+namespace Homes.WebAPI
 {
     public class BundleConfig
     {

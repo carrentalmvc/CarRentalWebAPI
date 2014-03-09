@@ -3,20 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Homes.DataAccess;
 
-namespace CarRentals.TestHarness
+namespace Rennish.TestHarness
 {
     class Program
     {
         static void Main(string[] args)
         {
-            var obj1 = Person.Instance;
-
-            var ctrObj = new Person();
-            if (object.ReferenceEquals(obj1, ctrObj))
-            {
-                Console.WriteLine("Objects are equal");
-            }
+            Console.WriteLine("Started initilaizing the databse...");
+            var cxt = new HomesDataContext();
+            cxt.Database.Initialize(true);
+            Console.WriteLine("Finished initializing the databse....");
 
             Console.ReadLine();
             

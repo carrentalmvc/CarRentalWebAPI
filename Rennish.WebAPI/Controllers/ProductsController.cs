@@ -6,7 +6,7 @@ using System.Web.Http;
 using Rennish.WebAPI.Models;
 using Rennish.WebAPI.Repository;
 
-namespace Rennish.WebAPI.Controllers
+namespace Homes.WebAPI.Controllers
 {
     public class ProductsController : ApiController
     {
@@ -43,6 +43,21 @@ namespace Rennish.WebAPI.Controllers
             }
 
             return new HttpResponseMessage(HttpStatusCode.BadRequest);
+        }
+
+        [HttpPut]
+        public void UpdateProduct(int Id)
+        {
+            var dbProduct = _repo.Get(Id);
+            if (dbProduct == null)
+            {
+                Request.CreateResponse(HttpStatusCode.NotFound);
+            }
+
+            else
+            {
+                _repo.Update(dbProduct);
+            }
         }
     }
 }

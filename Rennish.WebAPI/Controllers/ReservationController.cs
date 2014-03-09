@@ -7,7 +7,7 @@ using System.Web.Http;
 using Rennish.WebAPI.Models;
 using Rennish.WebAPI.Repository;
 
-namespace Rennish.WebAPI.Controllers
+namespace Homes.WebAPI.Controllers
 {
     public class ReservationController : ApiController
     {
