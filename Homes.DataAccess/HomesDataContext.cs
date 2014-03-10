@@ -3,13 +3,15 @@ using System.Configuration;
 using System.Data.Entity;
 using System.Linq;
 using Homes.DataAccess.Configuration;
+using Homes.DataAccess.Repository;
 using Homes.Model;
 
 namespace Homes.DataAccess
 {
-    public class HomesDataContext : DbContext
+    public class HomesDataContext : DbContext, IDbContext
     {
         //This makes sures that the database initailizer gets called everytime
+        
         static HomesDataContext()
         {
             Database.SetInitializer(new CustomDatabaseInitializer());
@@ -18,8 +20,10 @@ namespace Homes.DataAccess
         public HomesDataContext()
             : base(nameOrConnectionString: ConnectionString)
         {
+           
         }
 
+        //This will run a select * on the respective tables in the Database
         public DbSet<Home> Homes { get; set; }
 
         public DbSet<User> Users { get; set; }
@@ -56,6 +60,7 @@ namespace Homes.DataAccess
                 }
                 e.ModifiedOn = DateTime.Now;
             }
-        }
+        }      
+        
     }
 }

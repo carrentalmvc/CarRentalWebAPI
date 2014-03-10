@@ -68,6 +68,10 @@
       <Project>{1aa00c8c-37e7-4700-8f72-f9d60061ecc0}</Project>
       <Name>Homes.DataAccess</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Homes.Model\Homes.Model.csproj">
+      <Project>{3e801d80-f54d-45cf-a605-5804cbe02868}</Project>
+      <Name>Homes.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
