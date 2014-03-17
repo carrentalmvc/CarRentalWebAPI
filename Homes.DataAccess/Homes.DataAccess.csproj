@@ -52,6 +52,8 @@
     <Compile Include="Configuration\CustomDatabaseInitializer.cs" />
     <Compile Include="Configuration\HomeConfiguration.cs" />
     <Compile Include="Configuration\MembershipConfiguration.cs" />
+    <Compile Include="Configuration\OAuthMembershipConfiguration.cs" />
+    <Compile Include="Configuration\RolesConfiguration.cs" />
     <Compile Include="Configuration\UserConfiguration.cs" />
     <Compile Include="HomesDataContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

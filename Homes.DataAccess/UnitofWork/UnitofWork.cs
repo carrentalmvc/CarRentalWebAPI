@@ -27,7 +27,7 @@ namespace Homes.DataAccess.UnitofWork
             {
                 if (_home == null)
                 {
-                    _home = new GenericRepository<Home>(this._cxt);
+                    _home = new HomeRepository(this._cxt);
                 }
 
                 return _home;

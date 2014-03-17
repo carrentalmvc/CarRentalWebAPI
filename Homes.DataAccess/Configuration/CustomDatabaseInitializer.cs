@@ -4,8 +4,10 @@ using Homes.Model;
 namespace Homes.DataAccess.Configuration
 {
     public class CustomDatabaseInitializer : CreateDatabaseIfNotExists<HomesDataContext>
+    //DropCreateDatabaseIfModelChanges<HomesDataContext>
+
+        //CreateDatabaseIfNotExists<HomesDataContext>
     {
-        
         protected override void Seed(HomesDataContext context)
         {
             string[] descriptions = new string[10]{

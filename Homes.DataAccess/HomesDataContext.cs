@@ -40,6 +40,10 @@ namespace Homes.DataAccess
         {
             modelBuilder.Configurations.Add(new HomeConfiguration());
             modelBuilder.Configurations.Add(new UserConfiguration());
+            modelBuilder.Configurations.Add(new MembershipConfiguration());
+            modelBuilder.Configurations.Add(new OAuthMembershipConfiguration());
+            modelBuilder.Configurations.Add(new RolesConfiguration());
+
         }
 
         public override int SaveChanges()
