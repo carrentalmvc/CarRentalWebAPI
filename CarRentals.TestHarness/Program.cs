@@ -1,54 +1,22 @@
 ﻿using System;
+using System.Collections.Generic;
 using Homes.DataAccess;
 using Homes.DataAccess.UnitofWork;
 using Homes.Model;
-
+using Homes.Util.Extensions;
 namespace Rennish.TestHarness
 {
     internal class Program
     {
         private static void Main(string[] args)
         {
-            Console.WriteLine("Started initilaizing the databse...");
-            var cxt = new HomesDataContext();
-            cxt.Database.Initialize(true);
-            Console.WriteLine("Finished initializing the databse....");
-            var uow = new UnitofWork(new HomesDataContext());
-            var homes =  uow.HomeRepository.GetAll();
-            Console.WriteLine("First call made to the Home Repo....");
-            uow.HomeRepository.Add(new Home
-            {
-                Id = 11,
-                ImageName = "Candlebakkimgae.jpg",
-                BedRooms = 4,
-                Description = "This is the sweet home in Jackosnville",
-                Price = 214500.00M,
-                StreetAddress1 = "1068 Candlebar Dr",
-                ZipCode = "32204"
-
-            });
-
-            uow.Commit();
-
-            foreach (var home in homes)
-            {
-                Console.WriteLine(string.Format("Home details are {0} {1} {2}", home.Price, home.SquareFeet, home.ZipCode));
-            }
-            var homes2 = uow.HomeRepository.GetAll();
-
-            foreach (var home in homes2)
-            {
-                Console.WriteLine("Home Address {0} ", home.StreetAddress1);
-            }
-
-            Console.WriteLine("Second call made to the Home Repo....");
-
-            
-
-            
+           // CodedHomes.InitilazeCodedHomesDB();
+            var coll = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+            var result = coll.IsNullOrEmpty<int>();
+            Console.WriteLine("The collection is not null : {0}", result);
 
             Console.ReadLine();
-        }
+        }       
     }
 
     public class Person
@@ -86,12 +54,10 @@ namespace Rennish.TestHarness
     }
 
     public abstract class Employee
-    {       
-
+    {
         public string Name { get; set; }
 
         public abstract void Manage();
-        
 
         public int Add(int x, int y)
         {
@@ -101,11 +67,10 @@ namespace Rennish.TestHarness
 
     public class Manager : Employee
     {
-        public Manager() : base()
+        public Manager()
+            : base()
         {
-
         }
-
 
         public override void Manage()
         {

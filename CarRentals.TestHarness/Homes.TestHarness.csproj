@@ -56,9 +56,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CodedHomes.cs" />
     <Compile Include="Polymorphism\PlymorphismDemo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -72,6 +74,10 @@
     <ProjectReference Include="..\Homes.Model\Homes.Model.csproj">
       <Project>{3e801d80-f54d-45cf-a605-5804cbe02868}</Project>
       <Name>Homes.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Homes.Util\Homes.Util.csproj">
+      <Project>{9f6d0862-c738-4292-9579-88cc5e7a2e60}</Project>
+      <Name>Homes.Util</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

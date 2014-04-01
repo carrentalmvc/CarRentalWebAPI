@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/BS")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
@@ -13,5 +14,6 @@
     @Scripts.Render("~/bundles/jquery")
     @RenderSection("scripts", required: false)
     @RenderSection("styles", required: false)
+    @*@RenderSection("Bootstrap", required: false);*@
 </body>
 </html>

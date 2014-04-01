@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>h5f</id>
+    <version>1.0.1.1</version>
+    <title>H5F</title>
+    <authors>Ryan Seddon</authors>
+    <owners>Ryan Seddon</owners>
+    <licenseUrl>https://github.com/ryanseddon/H5F/blob/master/LICENSE-MIT</licenseUrl>
+    <projectUrl>https://github.com/ryanseddon/H5F</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>A JavaScript library that allows you to use the HTML5 Forms chapters new field input types, attributes and constraint validation API in non-supporting browsers.</description>
+    <summary>The H5F script will detect if the browser has support for the HTML5 Forms Chapter and either hook into the native methods, attributes and events or emulate the new features in non-supporting browsers.</summary>
+    <releaseNotes />
+    <copyright />
+    <language />
+    <tags>h5f</tags>
+  </metadata>
+</package>
